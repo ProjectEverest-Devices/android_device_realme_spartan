@@ -69,6 +69,9 @@ function blob_fixup() {
         odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc)
             sed -i "8i\    task_profiles ProcessCapacityHigh MaxPerformance" "${2}"
             ;;
+        odm/etc/dolby/multimedia_dolby_dax_default.xml)
+            sed -i "/volume-leveler-enable/ s/true/false/g" "${2}"
+            ;;
         product/app/PowerOffAlarm/PowerOffAlarm.apk)
             [ "$2" = "" ] && return 0
             apktool_patch "${2}" "${MY_DIR}/blob-patches/PowerOffAlarm.patch" -s
