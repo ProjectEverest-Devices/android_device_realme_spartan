@@ -340,6 +340,7 @@ PRODUCT_PACKAGES += \
     OPlusSettingsProviderResTarget \
     OPlusSettingsResTarget \
     OPlusSystemUIResTarget \
+    PixelSetupWizardStringsOverlay \
     WifiResTarget
 
 # Partitions
