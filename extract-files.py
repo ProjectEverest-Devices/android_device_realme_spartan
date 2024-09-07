@@ -85,6 +85,8 @@ blob_fixups: blob_fixups_user_type = {
         .sig_replace('23 0A 00 94', '1F 20 03 D5'),
     'odm/lib/libdlbdsservice_v3_6.so|odm/lib/libstagefright_soft_ddpdec.so|odm/lib/libstagefrightdolby.so|odm/lib64/libdlbdsservice_v3_6.so': blob_fixup()
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
+    'odm/lib64/libAlgoProcess.so': blob_fixup()
+        .replace_needed('android.hardware.graphics.common-V1-ndk_platform.so', 'android.hardware.graphics.common-V5-ndk.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
