@@ -97,6 +97,9 @@ function blob_fixup() {
         vendor/lib/libgui1_vendor.so)
             "${PATCHELF}" --replace-needed "libui.so" "libui-v30.so" "${2}"
             ;;
+        vendor/lib64/libwvhidl.so)
+            "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
+            ;;
     esac
 
     return 0
