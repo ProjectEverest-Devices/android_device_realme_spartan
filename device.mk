@@ -502,6 +502,10 @@ PRODUCT_PACKAGES += \
     libwfdaac_vendor \
     vendor.qti.hardware.display.config-V5-ndk
 
+    PRODUCT_PACKAGES += \
+    libgui_shim \
+    libinput_shim
+
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
