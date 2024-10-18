@@ -66,6 +66,9 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q libshims_fingerprint.oplus.so "${2}" || "${PATCHELF}" --add-needed libshims_fingerprint.oplus.so "${2}"
             ;;
+        odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc)
+            sed -i "8i\    task_profiles ProcessCapacityHigh MaxPerformance" "${2}"
+            ;;
         product/app/PowerOffAlarm/PowerOffAlarm.apk)
             [ "$2" = "" ] && return 0
             apktool_patch "${2}" "${MY_DIR}/blob-patches/PowerOffAlarm.patch" -s
