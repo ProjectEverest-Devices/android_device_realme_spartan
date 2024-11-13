@@ -12,9 +12,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/spartan/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := derp_spartan
+PRODUCT_NAME := lineage_spartan
 PRODUCT_DEVICE := spartan
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
@@ -32,5 +32,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := realme/RMX3371/RE54E4L1:14/UP1A.230620.001/S.14bef93_5a18-26df2:user/release-keys
 
-DERP_BUILDTYPE := Official
-EXTRA_UDFPS_ICONS := true
